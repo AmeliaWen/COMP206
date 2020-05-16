@@ -1,0 +1,17 @@
+commands for gdb
+gcc -g error.c // this is the c file provided 
+gdb a.out // now we can get the gdb prompt and work with it
+list // to able to see line number 
+break 10 // this is the line "ptr=getInfo()"
+run // run until breakpoint 
+print ptr // we can see the pointer is initialized to 0 
+step // step into the getInfo function 
+next next // go to the scanf line
+// enter the string
+print buffer // we can now see the input string in buffer variable 
+next //go to the printf line 
+print ptr // we can see the pointer does not change although buffer is changed 
+
+
+reason for the error 
+getInfo() is returning a local variable that is destroyed by the time it is used by main 
